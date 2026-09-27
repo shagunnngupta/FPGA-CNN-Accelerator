@@ -1,0 +1,42 @@
+$date
+	Tue Sep 15 13:48:24 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module relu_tb $end
+$var wire 32 ! data_out [31:0] $end
+$var reg 32 " data_in [31:0] $end
+$scope module uut $end
+$var wire 32 # data_in [31:0] $end
+$var wire 32 $ data_out [31:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b11001 $
+b11001 #
+b11001 "
+b11001 !
+$end
+#10000
+b0 !
+b0 $
+b11111111111111111111111111110110 "
+b11111111111111111111111111110110 #
+#20000
+b0 "
+b0 #
+#30000
+b11111111111111111111111110110111 "
+b11111111111111111111111110110111 #
+#40000
+b1100100 !
+b1100100 $
+b1100100 "
+b1100100 #
+#50000

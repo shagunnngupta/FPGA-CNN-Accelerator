@@ -1,0 +1,63 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1110-g18392a46)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 12;
+:vpi_module "C:\iverilog\lib\ivl\system.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\iverilog\lib\ivl\va_math.vpi";
+:vpi_module "C:\iverilog\lib\ivl\v2009.vpi";
+S_000002599bba9300 .scope package, "$unit" "$unit" 2 1;
+ .timescale 0 0;
+S_000002599bbaba30 .scope module, "relu_tb" "relu_tb" 3 3;
+ .timescale -9 -12;
+v000002599bbf5b90_0 .var/s "data_in", 31 0;
+v000002599bbf5c30_0 .net/s "data_out", 31 0, L_000002599bbf5d70;  1 drivers
+S_000002599bbf5960 .scope module, "uut" "relu" 3 7, 4 1 0, S_000002599bbaba30;
+ .timescale 0 0;
+    .port_info 0 /INPUT 32 "data_in";
+    .port_info 1 /OUTPUT 32 "data_out";
+L_000002599bc3f038 .functor BUFT 1, C4<00000000000000000000000000000000>, C4<0>, C4<0>, C4<0>;
+v000002599bbc32b0_0 .net/2s *"_ivl_0", 31 0, L_000002599bc3f038;  1 drivers
+v000002599bbc2e90_0 .net *"_ivl_2", 0 0, L_000002599bbf5cd0;  1 drivers
+L_000002599bc3f080 .functor BUFT 1, C4<00000000000000000000000000000000>, C4<0>, C4<0>, C4<0>;
+v000002599bbabbc0_0 .net/2s *"_ivl_4", 31 0, L_000002599bc3f080;  1 drivers
+v000002599bbabc60_0 .net/s "data_in", 31 0, v000002599bbf5b90_0;  1 drivers
+v000002599bbf5af0_0 .net/s "data_out", 31 0, L_000002599bbf5d70;  alias, 1 drivers
+L_000002599bbf5cd0 .cmp/gt.s 32, v000002599bbf5b90_0, L_000002599bc3f038;
+L_000002599bbf5d70 .functor MUXZ 32, L_000002599bc3f080, v000002599bbf5b90_0, L_000002599bbf5cd0, C4<>;
+    .scope S_000002599bbaba30;
+T_0 ;
+    %vpi_call/w 3 12 "$dumpfile", "sim/relu.vcd" {0 0 0};
+    %vpi_call/w 3 13 "$dumpvars", 32'sb00000000000000000000000000000000, S_000002599bbaba30 {0 0 0};
+    %pushi/vec4 25, 0, 32;
+    %store/vec4 v000002599bbf5b90_0, 0, 32;
+    %delay 10000, 0;
+    %vpi_call/w 3 17 "$display", "Input: %d, Output: %d", v000002599bbf5b90_0, v000002599bbf5c30_0 {0 0 0};
+    %pushi/vec4 4294967286, 0, 32;
+    %store/vec4 v000002599bbf5b90_0, 0, 32;
+    %delay 10000, 0;
+    %vpi_call/w 3 21 "$display", "Input: %d, Output: %d", v000002599bbf5b90_0, v000002599bbf5c30_0 {0 0 0};
+    %pushi/vec4 0, 0, 32;
+    %store/vec4 v000002599bbf5b90_0, 0, 32;
+    %delay 10000, 0;
+    %vpi_call/w 3 25 "$display", "Input: %d, Output: %d", v000002599bbf5b90_0, v000002599bbf5c30_0 {0 0 0};
+    %pushi/vec4 4294967223, 0, 32;
+    %store/vec4 v000002599bbf5b90_0, 0, 32;
+    %delay 10000, 0;
+    %vpi_call/w 3 29 "$display", "Input: %d, Output: %d", v000002599bbf5b90_0, v000002599bbf5c30_0 {0 0 0};
+    %pushi/vec4 100, 0, 32;
+    %store/vec4 v000002599bbf5b90_0, 0, 32;
+    %delay 10000, 0;
+    %vpi_call/w 3 33 "$display", "Input: %d, Output: %d", v000002599bbf5b90_0, v000002599bbf5c30_0 {0 0 0};
+    %vpi_call/w 3 35 "$finish" {0 0 0};
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 5;
+    "N/A";
+    "<interactive>";
+    "-";
+    "tb/relu_tb.sv";
+    "rtl/relu.sv";

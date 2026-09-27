@@ -1,0 +1,85 @@
+$date
+	Sat Sep 12 16:22:11 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module mac_unit_tb $end
+$var wire 32 ! result [31:0] $end
+$var reg 8 " a [7:0] $end
+$var reg 32 # accumulator [31:0] $end
+$var reg 8 $ b [7:0] $end
+$var reg 1 % clk $end
+$var reg 1 & rst $end
+$scope module uut $end
+$var wire 8 ' a [7:0] $end
+$var wire 32 ( accumulator [31:0] $end
+$var wire 8 ) b [7:0] $end
+$var wire 1 % clk $end
+$var wire 1 & rst $end
+$var wire 16 * product [15:0] $end
+$var reg 32 + result [31:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+bx +
+b0 *
+b0 )
+b0 (
+b0 '
+1&
+0%
+b0 $
+b0 #
+b0 "
+bx !
+$end
+#5000
+b0 !
+b0 +
+1%
+#10000
+0%
+#12000
+b1010 #
+b1010 (
+b1111 *
+b11 $
+b11 )
+b101 "
+b101 '
+0&
+#15000
+b11001 !
+b11001 +
+1%
+#16000
+b1111111111110001 *
+b11111011 "
+b11111011 '
+#20000
+0%
+#25000
+b11111111111111111111111111111011 !
+b11111111111111111111111111111011 +
+1%
+#26000
+b110010 #
+b110010 (
+b11111100 $
+b11111100 )
+b1111111111011000 *
+b1010 "
+b1010 '
+#30000
+0%
+#35000
+b1010 !
+b1010 +
+1%
+#36000

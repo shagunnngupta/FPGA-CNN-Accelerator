@@ -1,0 +1,97 @@
+$date
+	Sat Sep 12 23:51:20 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module mac_array_tb $end
+$var wire 8 ! a0 [7:0] $end
+$var wire 8 " a1 [7:0] $end
+$var wire 8 # a2 [7:0] $end
+$var wire 8 $ a3 [7:0] $end
+$var wire 8 % a4 [7:0] $end
+$var wire 8 & a5 [7:0] $end
+$var wire 8 ' a6 [7:0] $end
+$var wire 8 ( a7 [7:0] $end
+$var wire 8 ) a8 [7:0] $end
+$var wire 8 * b0 [7:0] $end
+$var wire 8 + b1 [7:0] $end
+$var wire 8 , b2 [7:0] $end
+$var wire 8 - b3 [7:0] $end
+$var wire 8 . b4 [7:0] $end
+$var wire 8 / b5 [7:0] $end
+$var wire 8 0 b6 [7:0] $end
+$var wire 8 1 b7 [7:0] $end
+$var wire 8 2 b8 [7:0] $end
+$var wire 32 3 result [31:0] $end
+$var integer 32 4 i [31:0] $end
+$scope module uut $end
+$var reg 32 5 result [31:0] $end
+$var integer 32 6 i [31:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b1001 6
+b101101 5
+b1001 4
+b101101 3
+b1 2
+b1 1
+b1 0
+b1 /
+b1 .
+b1 -
+b1 ,
+b1 +
+b1 *
+b1001 )
+b1000 (
+b111 '
+b110 &
+b101 %
+b100 $
+b11 #
+b10 "
+b1 !
+$end
+#10000
+b100100 3
+b100100 5
+b1001 6
+b10 2
+b10 )
+b10 1
+b10 (
+b10 0
+b10 '
+b10 /
+b10 &
+b10 .
+b10 %
+b10 -
+b10 $
+b10 ,
+b10 #
+b10 +
+b10 *
+b10 !
+b1001 4
+#20000
+b110 3
+b110 5
+b1001 6
+b1001 4
+b1 )
+b1 (
+b1 '
+b11 &
+b1 $
+b11111101 #
+b11111110 "
+b11111111 !
+#30000
